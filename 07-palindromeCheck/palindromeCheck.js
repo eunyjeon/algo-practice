@@ -26,10 +26,11 @@ const isPal = str => {
 
 // using recursion
 const isPal = str => {
-  str = str.toUpperCase()
-  if(str.length === 1 || str.lenth === 0) return true
+  if(str.length <= 1) return true
+  // if(str.length === 1 || str.lenth === 0) return true
   // if(str.length === 2 && str[0] === str[1]) return true
 
+  str = str.toUpperCase()
   if(str[0] === str[str.length-1]) {
     return isPal(str.slice(1, str.length-1))
   } else {
