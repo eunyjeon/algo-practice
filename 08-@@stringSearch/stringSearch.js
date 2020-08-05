@@ -11,7 +11,24 @@ const indexOf = (needle, haystack, pos=0) => {
   }
 }
 
+// slice has its own complexity
+// not recommended to use slice
+const indexOf = (needle, haystack) => {
+  const len = needle.length
+  if (len > haystack.length) return -1
 
+  for (let i=0; i<haystack.length-len; i++){
+    if (needle[0]===haystack[i]) {
+      let newHaystack = haystack.slice(i, i+len)
+      console.log(newHaystack)
+      if (needle === newHaystack) return i
+    }
+  }
+
+  return -1
+}
+
+// Boyer-Moore
 
 
 // indexOf('or', 'hello world'); // should return 7
