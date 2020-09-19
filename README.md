@@ -29,6 +29,10 @@ This list will be constantly updated.
 13. Tree Traversals
 15. Merge Sort
 
+## AlgoExpert
+02. Validate Subsequence
+03. Find Closest Value In BST
+
 ## Leetcode Solutions in JS
 Problems in this list are all from Leetcode.
 
