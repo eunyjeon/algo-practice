@@ -33,6 +33,8 @@ This list will be constantly updated.
 02. Validate Subsequence
 03. Find Closest Value In BST
 04. Branch Sums
+05. Node Depths
+06. Depth First Search
 
 ## Leetcode Solutions in JS
 Problems in this list are all from Leetcode.
