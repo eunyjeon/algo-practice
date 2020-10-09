@@ -1,16 +1,5 @@
 # Algorithm Practice
-This is a repository where I do techinical interview prep and practice algorithm problem solving skills. Each subfolder has its own README file and JavaScrpt file with a different whiteboarding or coding challenge question that I've encountered.
-
-Each README file has
-* a problem description/prompt
-* expected outcomes
-
-Each JS file is structured similarly with
-* My first attempts at the problem (mostly with brute force approach without external help)
-* Optimized solutions after looking up sources
-* Additional notes
-* code to run test cases
-
+This is a repository where I do techinical interview prep and practice algorithm problem solving skills.
 
 ## Problems (~9/15)
 This list will be constantly updated.
@@ -37,8 +26,3 @@ This list will be constantly updated.
 06. Depth First Search
 
 ## Leetcode Solutions in JS
-Problems in this list are all from Leetcode.
-
-### Easy
-### Medium
-### Hard
