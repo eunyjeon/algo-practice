@@ -173,6 +173,14 @@ Math.sqrt(25) // 5
 
 #### Math.max(num1, num2, ...)
 
+## 🌵 OBJECT
+#### Object.assign(target, source)
+  - The target object: what to apply the sources’ properties to, which is returned after it is modified.
+  - The source object(s): objects containing the properties you want to apply.
+
+  - The target is modified and returned.
+  - Properties in the target object are overwritten by properties in the sources if they have the same key.
+
 ## 🌵 SET
 - Instance propecties
   - Set.size

@@ -37,12 +37,13 @@
 |:--------------------------------:|--------------------------------------------------|
 |19-productOfArray                 | Udemy lecture                                    |
 |20-someRecursive                  | Udemy lecture                                    |
-|🌵 21-flatten                     | Udemy lecture                                     |
-|🌵 lc75-sortColors                | ⭐️⭐️⭐️                                            |
+|21-flatten                        | 🌵 Udemy lecture                                     |
+| lc75-sortColors                  | ⭐️⭐️⭐️                                            |
 |🐙 22-findExit                    | ⭐️⭐️ Couldn't solve it yet                        |
 | 23-commonStr                     | Too easy but real 2020 interview problem         |
 |**⭐️24-deepestNestedStr⭐️**       | ⭐️⭐️⭐️                                            |
 
 ## 10/12/2020
+
 |Problems                          |Description                                       |
 |:--------------------------------:|--------------------------------------------------|
