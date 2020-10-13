@@ -5,17 +5,21 @@ Write a recursive function called flatten which accepts an array of arrays and r
  */
 
 function flatten(arr) {
-  let flattened;
-
-  function helper(arr) {
-    arr.forEach((e) => {
-      if (typeof e !== "object") {
-        flattened.push(e);
-        return;
-      } else {
-        return helper(e);
-      }
-    });
+  let flattened = [];
+  function helper(elem) {
+    if (typeof elem !== "object") {
+      return flattened.push(elem);
+    } else {
+      elem.forEach((e) => helper(e));
+    }
   }
+
+  arr.forEach((e) => helper(e));
   return flattened;
 }
+
+
+/*
+Alternative to `typeof sth`
+Array.isArray(arr)
+*/
