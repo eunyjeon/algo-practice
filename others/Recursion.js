@@ -43,7 +43,7 @@ function stringifyNumbers(obj) {
   return newObj;
 }
 
-// 3.
+// 3. Pure
 function capitalizeFirst(array) {
   if (array.length === 1) {
     return [array[0][0].toUpperCase() + array[0].substr(1)];

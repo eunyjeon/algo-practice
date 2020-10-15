@@ -51,7 +51,9 @@
 |26-capitalizeWords                | Check the solution                               |
 |27-nestedEvenSum                  | ⭐️⭐️⭐️ Check the first recursive solution         |
 |28-stringifyNumbers               | ⭐️⭐️⭐️⭐️  |
-|29-collectStrings                 | ⭐️⭐️⭐ |
+|⭐ 29-collectStrings              | ⭐️⭐️⭐ |
+|lc1027-longestArithmeticProgression   | Also has threeAP [Geeksforgeeks](https://www.geeksforgeeks.org/longest-arithmetic-progression-dp-35/)  |
+
 
 
 

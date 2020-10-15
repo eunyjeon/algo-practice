@@ -83,6 +83,28 @@ console.log(array1.every(isBelowThreshold));
 // expected output: true
 ```
 
+### Array.from()
+
+- It creates a new, shallow-copied Array instance from an array-like(objects with a length property and indexed elements) or iterable object(objects such as `Map` and `Set`).
+- We can pass mapFn to call on every element of the array. (See the 2nd code example.)
+
+```js
+console.log(Array.from('foo'));
+// expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x => x + x));
+// expected output: Array [2, 4, 6]
+
+// Array from an Array-like object (arguments)
+function f() {
+  return Array.from(arguments);
+}
+
+f(1, 2, 3); // [ 1, 2, 3 ]
+
+
+```
+
 ### Array.reduce()
 
 - The reduce() method reduces the array to a single value.

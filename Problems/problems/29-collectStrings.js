@@ -51,7 +51,7 @@ function collectStrings(obj) {
   return stringsArr;
 }
 
-// 3. Pure recursion
+// 3.
 // Hmm Space complexity.....
 function collectStrings(obj, memo = []) {
   for (let [key, val] of Object.entries(obj)) {
@@ -76,6 +76,23 @@ function collectStrings(obj) {
   }
 
   return stringsArr;
+}
+
+
+// 4. Pure recursion
+// Must get used to this!!!
+function collectStrings(obj) {
+  const [key, val] = Object.entries(obj)[0]
+
+  if (Object.keys(obj).length === 1) {
+    if (typeof val === 'string') return [val]
+    else return collectStrings(val)
+  }
+
+  delete obj[key]
+  const res = collectStrings({...obj})
+  res.push(val)
+  return res
 }
 
 const obj = {

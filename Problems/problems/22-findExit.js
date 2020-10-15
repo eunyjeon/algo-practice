@@ -97,12 +97,9 @@ const myBoard = [
 console.log(findExit(myBoard, 3, 1)); //0,1
 console.log(findExit(myBoard, 0, 1)); //0,2
 
+
 // first try using recursive helper function called search
 function search(board, row, col, exit = [-1, -1], squaresToExit = 0) {
-  // Your code here.
-  // NOTE: You may use print statements for debugging purposes, but you may
-  //       need to remove them for the tests to pass.
-
   const numRows = board.length;
   const numCols = borad[0].length;
 
@@ -153,3 +150,80 @@ function findExit(board, row, col) {
   const result = search(board, row, col);
   return result === [] ? [-1, -1] : result;
 }
+
+
+
+
+
+
+
+///////////////
+// Natalie's solution
+// https://www.youtube.com/watch?v=KiCBXu4P-2Y
+
+function snakePath(grid, row, col){
+  //queues
+  let rowQueue = [row]
+  let colQueue = [col]
+  //matrix to keep track of the nodes already visited
+  let visited = Array(grid.length).fill([])
+  for (let i = 0; i < visited.length; i++){
+    visited[i] = new Array(grid[0].length).fill(false)
+  }
+  visited[row][col] = true
+
+  let reachedExit = false
+  let exitCoordinate = []
+  let startRow = row
+  let startCol = col
+
+  // Directions
+  let moveUpAndDown = [-1, +1, 0, 0]
+  let moveLeftAndRight = [0, 0, +1, -1]
+
+  while (rowQueue.length){
+    let currRow = rowQueue.shift()
+    let currCol = colQueue.shift()
+
+    if(currRow === grid.length - 1 || currCol === 0 || currRow === 0 || currCol === grid[0].length - 1) {
+      if(grid[currRow][currCol] === 0 && currRow !== startRow && currCol !== startCol){
+        reachedExit = true
+        exitCoordinate.push(currRow, currCol)
+        break
+      }
+    }
+      checkAdjacent(grid, currRow, currCol)
+
+    }
+      if (reachedExit){
+        return exitCoordinate
+      } else {
+        return [-1, -1]
+    }
+
+
+  function checkAdjacent(grid, row, col){
+    for (let i =0; i< moveUpAndDown.length; i++){
+    let newRow = row + moveUpAndDown[i]
+    let newCol = col + moveLeftAndRight[i]
+    //check if new row or column is out of bounds or coordinate is not a 0
+    if (newRow < 0 || newRow < 0 || newRow >= grid.length || newCol >= grid[0].length || visited[newRow][newCol] || grid[newRow][newCol] === '+'){
+      continue
+    }
+    //process node in queue
+    rowQueue.push(newRow)
+    colQueue.push(newCol)
+    visited[newRow][newCol] = true
+    }
+  }
+
+}
+
+  snakePath([
+  ['+',  '+',  '+',  '+',  '+',  '+',  '+',  0,  0],
+  ['+',  '+',  0,  0,  0,  0,  0,  '+',  '+'],
+  [0,  0,  0,  0,  0,  '+',  '+',  0,  '+'],
+  ['+',  '+',  0,  '+',  '+',  '+',  '+',  0,  0],
+  ['+',  '+',  0,  0,  0,  0,  0,  0,  '+'],
+  ['+',  '+',  0,  '+',  '+',  0,  '+',  0,  '+']
+  ], 5, 2)
