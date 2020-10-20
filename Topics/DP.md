@@ -20,7 +20,7 @@
   - Compared to Greedy Method, DP is time consuming
   - Often solved by recursive formulas (Though, we will not use a recursion of programmng, but the formulas are recursive. using iteration.)
 
-- DP follows the **Priciple of Optimality**
+- DP follows the ***Priciple of Optimality***
   - Principle of Opimality says that a problem can be solved by taking **a sequence of decisions** to get the optimal solution.
   - Making decisions
     - In greedy mothods, decision is taken one time that "We will do it like this" and we will follow that procedure.

@@ -54,7 +54,27 @@
 |⭐ 29-collectStrings              | ⭐️⭐️⭐ |
 |lc1027-longestArithmeticProgression   | Also has threeAP [Geeksforgeeks](https://www.geeksforgeeks.org/longest-arithmetic-progression-dp-35/)  |
 
+## 10/15/2020
 
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+|lc300-longestIncreasingSubsequence| ⭐️⭐️⭐⭐⭐⭐                                       |
 
+## 10/16/2020
 
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+|lc200-numberOfIslands            | ⭐️⭐️⭐⭐⭐⭐                                        |
 
+## 10/17/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+|lc2-AddTwoNumbers                 | ⭐⭐                                              |
+
+## 10/18/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+|lc42-TrappingRainWater            | ⭐⭐⭐⭐                                          |
+|lc146-LRUCache                   | ⭐⭐⭐                                            |
