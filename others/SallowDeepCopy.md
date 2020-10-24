@@ -41,8 +41,8 @@
     if (objectpassed === null || typeof objectpassed !== 'object') {
       return objectpassed;
     }
-  // give temporary-storage the original obj's constructor
-  var temporary-storage = objectpassed.constructor();
+    // give temporary-storage the original obj's constructor
+    var temporary-storage = objectpassed.constructor();
     for (var key in objectpassed) {
       temporary-storage[key] = keepCloning(objectpassed[key]);
     }

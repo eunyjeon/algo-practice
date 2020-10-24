@@ -1,4 +1,3 @@
-class: center middle
 # Reverse a Linked List
 
 ---
@@ -51,16 +50,15 @@ console.log(reversed)
 
 ---
 
-class: center middle
 ## Interviewer Guide
 
 ---
 
 ### R/E
 
-* Give Part 1 before hinting that there is a Part 2 (if you can).
-* The list is singly-linked – it only has `value` (or `head`) and `next` (or `tail`) properties.
-* The list can be implemented as a class, or factory function, or just manually-constructed plain old javascript objects. It doesn't really matter.
+- Give Part 1 before hinting that there is a Part 2 (if you can).
+- The list is singly-linked – it only has `value` (or `head`) and `next` (or `tail`) properties.
+- The list can be implemented as a class, or factory function, or just manually-constructed plain old javascript objects. It doesn't really matter.
 
 ---
 
@@ -76,10 +74,10 @@ const newNodeBad = { value: something }
 newNodeBad.next = oldNode
 ```
 
-* Parameters and variables can be _defined_ but not _reassigned_. Parameters _may_ have default values (but it is not strictly necessary to solve the problem).
-* If they are hitting a complete wall, point out that instead of loops, functional languages use recursion.
-* Think of `null` as "empty list" – in practice it is a cleaner and more natural base case for recursion than the last "occupied" node.
-* For Part 2, if they are trying to re-use existing nodes, help guide them towards the realization that it is impossible to re-use existing nodes in a reversed list without mutating those nodes.
+- Parameters and variables can be _defined_ but not _reassigned_. Parameters _may_ have default values (but it is not strictly necessary to solve the problem).
+- If they are hitting a complete wall, point out that instead of loops, functional languages use recursion.
+- Think of `null` as "empty list" – in practice it is a cleaner and more natural base case for recursion than the last "occupied" node.
+- For Part 2, if they are trying to re-use existing nodes, help guide them towards the realization that it is impossible to re-use existing nodes in a reversed list without mutating those nodes.
 
 ---
 
