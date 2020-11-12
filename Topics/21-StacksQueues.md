@@ -71,8 +71,83 @@ class Stack {
 
 ## 155. Intro to Queues
 
+- **FIFO** data structure
+- Examples
+  - Background tasks
+  - Uploading resources
+  - Printing, task processing
+
+- Implementation
+  - Using arrays; OR
+  - Using a Queue class
+
 ## 156. Creating Queues Using Arrays
+
+- enqueue to the end
+- dequeue from the beginning
+- enqueue and dequeue could be done in opposite direction (add to the beginning and delete from the end)
+  - If you keep following the FIFO rule, it doesn't matter which side you push or pop.
+- BUT not ideal since reindexing items when dequeued is expensive.
 
 ## 157. Writing Queue From Scratch
 
+- **Inserting to the end & removing from the beginning** (cheaper than adding to the beginning and deleting from the end)
+
+```js
+class Queue {
+  constructor() {
+    this.first = null
+    this.last = null
+    this.size = 0
+  }
+
+  // adding to end
+  enqueue(val) {
+    let newNode = new Node(val)
+
+    if (this.first) {
+      this.last.next = newNode
+      this.last = this.last.next
+    } else {
+      this.first = newNode
+      this.last = this.first
+    }
+
+    return ++this.size
+  }
+
+  // removing from beginning
+  dequeue() {
+    if (!this.first) return null
+
+    let dequeued = this.first
+    if (this.first === this.last) {
+      this.last = null
+    }
+    this.first = this.first.next
+    this.size--
+    return dequeued.value
+  }
+}
+
+class Node {
+  constructor(value) {
+    this.value = value
+    this.next = null
+  }
+}
+```
+
+### Implementing Stack and Queue using Classes (Singly Linked List)
+
+- **Pop and Dequeue should be the same : Removing from the beginning**
+  -Removing from the end is always expensive than the other
+- Push and Enqueue aren't
+  - For Stacks, pushing to the beginning && removing from the beginning
+  - For Queues, adding to the eand && removing from the beginning
+
 ## 158. Big O of Queues
+
+- Insertion & Removal : O(1) <- when using SLL or circular array
+  - If using arrays, reindexing makes time complexity increased -> time complexity of dequeue will be O(n) [Array Implementation of Queue](https://www.geeksforgeeks.org/array-implementation-of-queue-simple/)
+- Searching & Access : O(N) <- doesn't matter

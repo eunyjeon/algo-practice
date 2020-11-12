@@ -64,6 +64,26 @@ for (let i= 0; i < str.length; i++) {
 console.log(count)
 ```
 
+### referenceStr.localeCompare(compareString)
+
+- Returns an integer indicating whether the referenceStr comes before, after or is equivalent to the compareString.
+  - Negative when the referenceStr occurs before compareString
+  - Positive when the referenceStr occurs after compareString
+  - Returns 0 if they are equivalent
+
+```js
+// The letter "a" is before "c" yielding a negative value
+'a'.localeCompare('c'); // -2 or -1 (or some other negative value)
+
+// Alphabetically the word "check" comes after "against" yielding a positive value
+'check'.localeCompare('against'); // 2 or 1 (or some other positive value)
+
+// "a" and "a" are equivalent yielding a neutral value of zero
+'a'.localeCompare('a'); // 0
+```
+
+
+
 ## ARRAY
 
 ### Array.concat()
@@ -250,6 +270,28 @@ Math.sqrt(25) // 5
 - `for (let key of Object.keys(myObj))`
 - `for (let val of Object.values(myObj))`
 
+## 🐙 Number
+
+### isFinite()
+
+- `isFinite()` function determines whether the passed value is a finite number. If  needed, the parameter is first converted to a number.
+
+```js
+isFinite(Infinity);  // false
+isFinite(NaN);       // false
+isFinite(-Infinity); // false
+
+isFinite(0);         // true
+isFinite(2e64);      // true
+isFinite(910);       // true
+
+isFinite(null);      // true, would've been false with the
+                     // more robust Number.isFinite(null)
+
+isFinite('0');       // true, would've been false with the
+                     // more robust Number.isFinite("0")
+```
+
 ## 🌵 SET
 
 - Instance propecties
@@ -287,6 +329,19 @@ mySet.has(5) // false
 mySet.size // 4
 ```
 
+### Iterating Sets
+
+```js
+    // when Set(4) { 1, "some text", {…}, {…} }
+
+
+    // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+    for (let item of mySet) console.log(item)
+
+    // converting Set object to an Array object, with Array.from
+    let my Arr = Array.from(mySet)
+```
+
 ## 🌵 MAP
 
 - A `Map` object iterates its elements in insertion order — a `for...of` loop returns an array of [key, value] for each iteration.
@@ -316,3 +371,6 @@ contacts.delete('Raymond') // false
 contacts.delete('Jessie') // true
 console.log(contacts.size) // 1
 ```
+
+
+

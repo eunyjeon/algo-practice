@@ -93,3 +93,27 @@
 |:--------------------------------:|--------------------------------------------------|
 |CandyCrush                        | ⭐⭐⭐⭐⭐                                         |
 |lc-reverseLinkedList              | ⭐⭐⭐                                            |
+
+## 10/26/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+| parenthesis problems | ⭐⭐⭐ [Read the solutions. It demonstrates how I should explain and answer my solutions.](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/solution/)|
+
+## 10/30/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+| lc513-findBottomLeftTreeValue    |  |
+
+## 11/01/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+| lc513-findBottomLeftTreeValue    |  |
+
+## 11/05/2020
+
+|Problems                          |Description                                       |
+|:--------------------------------:|--------------------------------------------------|
+| lc221-maxSquare                  |  |

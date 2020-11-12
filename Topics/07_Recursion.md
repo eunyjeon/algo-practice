@@ -33,11 +33,13 @@
   - Stack overflow
 
 ## 48. Helper Method Recursion
+
   - When an **outer function** has an **inner recursive function**
   - E.g., when dealing with an array/string, collecting values in an array/object (compiling an array/etc.)
 
 ## 49. Pure Recursion
-  - A recursive function that is self-contained without having nested functions
+
+- A recursive function that is self-contained without having nested functions
 
   ```js
     function collectOddValues(arr) {
@@ -55,10 +57,11 @@
       return newArr
     }
   ```
-  - Tips
-    - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you don't mutate them
-    - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
-    - To make copies of objects use Object.assign or the spread operator
+
+- Tips
+  - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you don't mutate them
+  - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
+  - To make copies of objects use Object.assign or the spread operator
 
 
 
