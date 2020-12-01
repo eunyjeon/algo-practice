@@ -1,5 +1,5 @@
 /* ************************** */
-// Solution from the book
+// CTCI Solution
 // IDEA: The only way to move to spot (r,c) is by moving to to (r-1,c) or (r, c-1).
 // If you want to return bool -> finder is enough
 // Time O(2^(r+c)) since each path has r+c steps and there are 2 choices I can make at each step
@@ -28,7 +28,7 @@ function getPath(maze) {
 }
 
 /* ************************** */
-// Solution from the book - optimized by caching previously computed results
+// CTCI Solution - optimized by caching previously computed results
 // By caching them, time complexity became O(row*col) since I remember which cells I already visited.
 
 function finder(maze, row, col, path, cache) {
@@ -141,7 +141,7 @@ const getPath = function (grid) {
 //   [ 1, 2 ], [ 2, 2 ],
 //   [ 2, 3 ], [ 1, 0 ]
 // ]
-// but [1, 0] shouldn't be included.
+// Here, [1, 0] shouldn't be included in my solution.
 
 const getPath = function (grid) {
   let rows = grid.length;

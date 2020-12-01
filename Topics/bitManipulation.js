@@ -1,9 +1,11 @@
 /* ********************************* */
-//Bitwise Operators / Bit Minipulation
-//
-// TODO: Problems asking to do arithmatic operations without the signs ==> Bit Manipulation!
-//
-//
+/*
+Bitwise Operators / Bit Minipulation
+
+TODO: Problems asking to do arithmatic operations without the signs ==> Bit Manipulation!
+  -
+
+ */
 /* ********************************* */
 
 /* *************** */
@@ -145,9 +147,12 @@ function isPowerOfTwo(x) {
   return (x & (x - 1)) == 0;
 }
 /* Adding two numbers */
-function addTwoNums(a, b) {
-  let carry = a & b; // gives me the positions that need to carry 1 to the next position
-  carry = carry << 1; // move carries to one position to the left
-  // XOR opperator simulates the addition. (with & for carry)
-  return carry ^ (a ^ b);
-}
+var getSum = function(a, b) {
+  let carry;
+  while((a & b) !== 0){
+      carry = (a & b) << 1;
+      a = a ^ b;
+      b = carry;
+  }
+  return a ^ b;
+};
